@@ -75,24 +75,6 @@ export default function Landing() {
                     position: 'relative',
                     overflow: 'hidden'
                 }}>
-                    {/* Decorative Images inside the hero panel */}
-                    <img src={`${import.meta.env.BASE_URL}coral.png`} alt="Coral" className="animate-float" style={{
-                        position: 'absolute',
-                        bottom: '-50px',
-                        left: '-50px',
-                        width: '200px',
-                        opacity: 0.8,
-                        zIndex: 0
-                    }} />
-                    <img src={`${import.meta.env.BASE_URL}drone.png`} alt="Drone" className="animate-float" style={{
-                        position: 'absolute',
-                        top: '-30px',
-                        right: '-30px',
-                        width: '250px',
-                        animationDelay: '1s',
-                        zIndex: 0
-                    }} />
-
                     <div style={{ position: 'relative', zIndex: 1 }}>
                         <h2 style={{ fontSize: '3.5rem', marginBottom: '20px', color: '#fff', textShadow: 'var(--neon-glow-teal)' }}>
                             Исследуйте глубины заповедников

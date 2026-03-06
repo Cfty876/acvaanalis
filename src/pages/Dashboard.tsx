@@ -376,9 +376,9 @@ export default function Dashboard() {
     const activeDrone = drones.find(d => d.id === selectedDrone);
 
     return (
-        <div style={{ display: 'flex', height: '100vh', backgroundColor: 'var(--color-deep-ocean)', color: 'var(--color-text-main)' }}>
+        <div className="dashboard-main" style={{ display: 'flex', height: '100vh', backgroundColor: 'var(--color-deep-ocean)', color: 'var(--color-text-main)', width: '100vw', overflow: 'hidden' }}>
             {/* Extended Sidebar */}
-            <div className="glass-panel" style={{
+            <div className="glass-panel sidebar-container" style={{
                 width: '450px',
                 height: '100%',
                 borderRight: '1px solid var(--glass-border)',
@@ -540,7 +540,7 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                        <div className="telemetry-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                             <div className="telemetry-item">
                                 <span style={{ color: 'var(--color-text-muted)', fontSize: '0.6rem' }}>VOLTAGE</span>
                                 <div style={{ fontSize: '1rem', color: '#fff', fontWeight: '700' }}>{activeDrone.telemetry.voltage.toFixed(1)}V</div>
@@ -657,7 +657,7 @@ export default function Dashboard() {
             </div>
 
             {/* Map & Video Area */}
-            <div style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+            <div className="main-content-area" style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
                 {/* Dynamic Camera Feed Area */}
                 <div style={{
                     height: isCameraEnabled ? '40%' : '60px',

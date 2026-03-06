@@ -576,3 +576,129 @@ a:hover {
     opacity: 0;
   }
 }
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 768px) {
+
+  /* Landing Adjustments */
+  nav {
+    padding: 16px 20px !important;
+    flex-wrap: wrap !important;
+    gap: 12px;
+    justify-content: center !important;
+  }
+
+  .landing-page h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .landing-page main {
+    padding: 40px 16px !important;
+  }
+
+  .landing-page .glass-panel {
+    padding: 30px 20px !important;
+  }
+
+  .landing-page h2 {
+    font-size: 2rem !important;
+  }
+
+  .landing-page main p {
+    font-size: 1rem !important;
+  }
+
+  .landing-page section {
+    gap: 20px !important;
+    margin-top: 40px !important;
+  }
+
+  .glass-card {
+    width: 100% !important;
+    max-width: 350px;
+  }
+
+  /* Dashboard Adjustments */
+  .dashboard-main {
+    flex-direction: column !important;
+    overflow-y: auto !important;
+  }
+
+  .sidebar-container {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 20px !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+  }
+
+  .main-content-area {
+    min-height: 400px !important;
+    flex: none !important;
+    height: 500px !important;
+  }
+
+  .telemetry-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Map and Camera Adjustments */
+  .camera-container {
+    height: 100% !important;
+  }
+
+  .osd-overlay {
+    padding: 15px !important;
+    font-size: 0.6rem !important;
+  }
+
+  .osd-corner {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .osd-rec {
+    top: 15px !important;
+    left: 45px !important;
+  }
+
+  .osd-top-left {
+    top: 10px !important;
+    left: 10px !important;
+  }
+
+  .osd-top-right {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  .osd-bottom-left {
+    bottom: 10px !important;
+    left: 10px !important;
+  }
+
+  .osd-bottom-right {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+
+  /* Utility */
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .telemetry-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .landing-page h2 {
+    font-size: 1.7rem !important;
+  }
+}
