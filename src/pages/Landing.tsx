@@ -26,7 +26,7 @@ export default function Landing() {
 
     return (
         <div className="landing-page" style={{
-            backgroundImage: 'url(/bg.png)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}bg.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             minHeight: '100vh',
@@ -76,7 +76,7 @@ export default function Landing() {
                     overflow: 'hidden'
                 }}>
                     {/* Decorative Images inside the hero panel */}
-                    <img src="/coral.png" alt="Coral" className="animate-float" style={{
+                    <img src={`${import.meta.env.BASE_URL}coral.png`} alt="Coral" className="animate-float" style={{
                         position: 'absolute',
                         bottom: '-50px',
                         left: '-50px',
@@ -84,7 +84,7 @@ export default function Landing() {
                         opacity: 0.8,
                         zIndex: 0
                     }} />
-                    <img src="/drone.png" alt="Drone" className="animate-float" style={{
+                    <img src={`${import.meta.env.BASE_URL}drone.png`} alt="Drone" className="animate-float" style={{
                         position: 'absolute',
                         top: '-30px',
                         right: '-30px',
