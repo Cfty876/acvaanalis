@@ -26,7 +26,7 @@ export default function Login() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundImage: 'url(/bg.png)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}bg.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative'
