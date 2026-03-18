@@ -52,11 +52,16 @@ export default function Landing() {
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <Droplets size={32} color="var(--color-teal)" />
-                    <h1 style={{ fontSize: '2rem', letterSpacing: '2px', color: '#fff' }}>ВОДЯНОЙ</h1>
+                    <div>
+                        <h1 style={{ fontSize: '1.9rem', letterSpacing: '2px', color: '#fff' }}>АкваАнализ</h1>
+                        <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginTop: '2px' }}>
+                            Официальная система мониторинга качества воды
+                        </p>
+                    </div>
                 </div>
                 <div style={{ display: 'flex', gap: '16px' }}>
-                    <Link to="/login" className="btn-secondary">Вход</Link>
-                    <Link to="/register" className="btn-primary">Регистрация</Link>
+                    <Link to="/login" className="btn-secondary">Вход в систему</Link>
+                    <Link to="/register" className="btn-primary">Запрос доступа</Link>
                 </div>
             </nav>
 
@@ -76,15 +81,25 @@ export default function Landing() {
                     overflow: 'hidden'
                 }}>
                     <div style={{ position: 'relative', zIndex: 1 }}>
-                        <h2 style={{ fontSize: '3.5rem', marginBottom: '20px', color: '#fff', textShadow: 'var(--neon-glow-teal)' }}>
-                            Исследуйте глубины заповедников
+                        <h2 style={{ fontSize: '3.2rem', marginBottom: '20px', color: '#fff' }}>
+                            Рабочий кабинет мониторинга водных экосистем
                         </h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-main)', marginBottom: '40px', lineHeight: '1.6' }}>
-                            Инновационная платформа мониторинга подводного мира. Управляйте дронами, исследуйте водные ресурсы и собирайте данные на интерактивной карте России.
+                        <p style={{ fontSize: '1.1rem', color: 'var(--color-text-main)', marginBottom: '24px', lineHeight: '1.6' }}>
+                            Сервис для сотрудников заповедников и особо охраняемых природных территорий России.
+                            Здесь вы планируете маршруты, фиксируете водные объекты и получаете сводки по состоянию воды.
                         </p>
-                        <Link to="/register" className="btn-primary" style={{ fontSize: '1.2rem', padding: '16px 36px' }}>
-                            Начать погружение <ArrowRight size={20} />
-                        </Link>
+                        <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', marginBottom: '32px' }}>
+                            Доступ к системе предоставляется администрацией заповедника. Для входа используйте
+                            служебный аккаунт и ключ платформы.
+                        </p>
+                        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                            <Link to="/login" className="btn-primary" style={{ fontSize: '1.05rem', padding: '14px 30px' }}>
+                                Войти в систему <ArrowRight size={20} />
+                            </Link>
+                            <Link to="/register" className="btn-secondary" style={{ fontSize: '0.95rem', padding: '12px 26px' }}>
+                                Запросить новый доступ
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -97,18 +112,27 @@ export default function Landing() {
                 }}>
                     <div className="glass-card" style={{ padding: '30px', width: '300px', textAlign: 'left' }}>
                         <Shield size={40} color="var(--color-teal)" style={{ marginBottom: '20px' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Безопасный доступ</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Получите уникальный ключ платформы для защищенного доступа к управлению дронами.</p>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Защищённый доступ</h3>
+                        <p style={{ color: 'var(--color-text-muted)' }}>
+                            Персональные учётные записи сотрудников и ключ платформы обеспечивают контроль доступа
+                            и безопасность данных мониторинга.
+                        </p>
                     </div>
                     <div className="glass-card" style={{ padding: '30px', width: '300px', textAlign: 'left' }}>
                         <Map size={40} color="var(--color-teal)" style={{ marginBottom: '20px' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Интерактивная карта</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Рисуйте маршруты, отмечайте точки сбора воды и наблюдайте за автоматическим патрулированием.</p>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Картирование водных объектов</h3>
+                        <p style={{ color: 'var(--color-text-muted)' }}>
+                            Наносите заповедные территории и водные объекты на карту, планируйте маршруты отбора проб
+                            и фиксируйте зоны наблюдения.
+                        </p>
                     </div>
                     <div className="glass-card" style={{ padding: '30px', width: '300px', textAlign: 'left' }}>
                         <Droplets size={40} color="var(--color-teal)" style={{ marginBottom: '20px' }} />
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Мониторинг воды</h3>
-                        <p style={{ color: 'var(--color-text-muted)' }}>Получайте аналитику и данные о состоянии водоемов в заповедниках России в реальном времени.</p>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Аналитика качества воды</h3>
+                        <p style={{ color: 'var(--color-text-muted)' }}>
+                            Отслеживайте динамику показателей воды и формируйте отчёты для внутренних служб и
+                            надзорных органов.
+                        </p>
                     </div>
                 </section>
             </main>

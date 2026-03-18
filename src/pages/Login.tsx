@@ -47,7 +47,10 @@ export default function Login() {
                 textAlign: 'center'
             }}>
                 <Shield size={48} color="var(--color-teal)" style={{ marginBottom: '20px' }} />
-                <h2 style={{ fontSize: '2rem', marginBottom: '30px' }}>Вход в Водяной</h2>
+                <h2 style={{ fontSize: '2rem', marginBottom: '10px' }}>Вход в систему «АкваАнализ»</h2>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginBottom: '20px' }}>
+                    Используйте служебный email и пароль, выданные администрацией заповедника.
+                </p>
 
                 <form onSubmit={handleSubmit} style={{ textAlign: 'left' }}>
                     <div className="input-group">

@@ -136,7 +136,7 @@ export default function Dashboard() {
     const [drones, setDrones] = useState<Drone[]>([
         {
             id: 'dr-1',
-            name: 'Водяной X-1',
+            name: 'АкваАнализ-1',
             battery: 85,
             status: 'idle',
             waterSamples: 0,
@@ -149,7 +149,7 @@ export default function Dashboard() {
         },
         {
             id: 'dr-2',
-            name: 'Водяной X-2',
+            name: 'АкваАнализ-2',
             battery: 92,
             status: 'idle',
             waterSamples: 0,
@@ -394,7 +394,12 @@ export default function Dashboard() {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexShrink: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                         <Droplets size={32} color="var(--color-teal)" />
-                        <h2 style={{ fontSize: '1.5rem', color: '#fff', letterSpacing: '2px', fontWeight: '800' }}>ВОДЯНОЙ</h2>
+                        <div>
+                            <h2 style={{ fontSize: '1.4rem', color: '#fff', letterSpacing: '2px', fontWeight: '800' }}>АкваАнализ</h2>
+                            <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', marginTop: '2px' }}>
+                                Система мониторинга качества воды
+                            </div>
+                        </div>
                     </div>
                     <div style={{
                         fontSize: '0.7rem',
