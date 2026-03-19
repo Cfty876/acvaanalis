@@ -662,15 +662,23 @@ export default function Dashboard() {
             </div>
 
             {/* Map & Video Area */}
-            <div className="main-content-area" style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+            <div className="main-content-area" style={{
+                flex: 1,
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: isCameraEnabled ? '10px' : '0px',
+                paddingTop: isCameraEnabled ? '10px' : '0px'
+            }}>
                 {/* Dynamic Camera Feed Area */}
                 <div style={{
-                    height: isCameraEnabled ? '40%' : '60px',
+                    height: isCameraEnabled ? '50%' : '60px',
                     position: 'relative',
                     transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-                    borderBottom: '2px solid var(--glass-border)',
+                    borderBottom: isCameraEnabled ? '0' : '2px solid var(--glass-border)',
                     overflow: 'hidden',
-                    background: '#000'
+                    background: '#000',
+                    borderRadius: isCameraEnabled ? '12px' : '0px'
                 }}>
                     {isCameraEnabled ? (
                         <CameraFeed activeDrone={activeDrone} />
@@ -688,7 +696,13 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                <div style={{ flex: 1, position: 'relative' }}>
+                <div style={{
+                    flex: 1,
+                    position: 'relative',
+                    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                    borderRadius: isCameraEnabled ? '12px' : '0px',
+                    overflow: 'hidden'
+                }}>
                     <YMaps query={{ apikey: 'fe27ef98-c1a7-47f5-939e-28956b66babe', lang: 'ru_RU' }}>
                         {/* NOTE: API key is a placeholder public Yandex Maps key for demo purposes. In production, use your own. */}
                         <Map
